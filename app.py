@@ -1,41 +1,21 @@
 import streamlit as st
-
-st.title("Hello, Streamlit!")
-st.write("Welcome to your first Streamlit app.")
-
-
 import pandas as pd
-import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn import linear_model
 
 
+st.title("American hausing Data Analysis")
 
-st.title("Streamlit Interactive App Example")
-
-# Text input
-#name = st.text_input("Enter your name:")
-#st.write(f"Hello, {name}!")
-
-# Slider input
-#age = st.slider("Select your age:", 0, 100)
-#st.write(f"You are {age} years old.")
-
-
-#=====================================================
-# Load data
+#Load the dataset
 data = pd.read_csv('American_Housing_Data.csv')
+file_path = "American_Housing_Data.csv"
+data = pd.read_csv(file_path)
 
-# Display the data
-st.write("Data Preview:", data)
+# Display the dataset
+st.subheader("Dataset Overview")
+st.write(data.head())
 
-
-# Display summary statistics
-st.write("Data Summary:")
+# Basic statistics
+st.subheader("Basic Statistics")
 st.write(data.describe())
-
-# Plot data
-st.subheader("Simple Line Plot of First Column")
-st.line_chart(data[data.columns[0]]
-              
-              )
-#00000000000000000000000000000
