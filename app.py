@@ -23,7 +23,7 @@ st.title("Streamlit Interactive App Example")
 
 #=====================================================
 # Load data
-data = pd.read_csv('American_Housing_Data_.csv')
+data = pd.read_csv('American_Housing_Data.csv')
 
 # Display the data
 st.write("Data Preview:", data)
@@ -39,13 +39,3 @@ st.line_chart(data[data.columns[0]]
               
               )
 #00000000000000000000000000000
-X = data.iloc[:,7:8]
-X= X.values
-
-
-Y = data.iloc[:,2]
-Y= Y.values
-
-reg = linear_model.LinearRegression()
-reg.fit(X , Y)
-print(reg.coef_)
