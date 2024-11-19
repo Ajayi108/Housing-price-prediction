@@ -23,7 +23,7 @@ st.title("Streamlit Interactive App Example")
 
 #=====================================================
 # Load data
-data = pd.read_csv('fake_sales_data.csv')
+data = pd.read_csv('American_Housing_Data_.csv')
 
 # Display the data
 st.write("Data Preview:", data)
