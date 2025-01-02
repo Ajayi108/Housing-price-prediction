@@ -9,6 +9,7 @@ __pycache__/
 # Virtual environments
 .venv/
 .env/
+venv/
 
 # Distribution / packaging
 .Python
@@ -41,8 +42,6 @@ coverage.xml
 *.cover
 .hypothesis/
 
-# Jupyter Notebook
-.ipynb_checkpoints
 
 # PyCharm
 .idea/
@@ -64,7 +63,6 @@ events.log
 Thumbs.db
 
 # Data files
-*.csv
 *.tsv
 *.xlsx
 *.json
