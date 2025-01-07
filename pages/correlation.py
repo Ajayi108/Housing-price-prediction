@@ -25,3 +25,15 @@ plt.figure(figsize=(10, 6))
 correlation_matrix = numerical_data.corr()
 sns.heatmap(correlation_matrix, annot=True, fmt=".2f", cmap="coolwarm", cbar=True)
 st.pyplot(plt)
+
+
+# Replace 'SalePrice' with your target variable's name
+target_variable = "Price"
+correlations = numerical_data.corr()[target_variable].sort_values(ascending=False)
+
+plt.figure(figsize=(10, 6))
+correlations.plot(kind="bar", color="skyblue")
+plt.title(f"Correlation with {target_variable}")
+plt.ylabel("Correlation Coefficient")
+plt.xlabel("Features")
+st.pyplot(plt)
