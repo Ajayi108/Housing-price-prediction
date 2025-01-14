@@ -53,6 +53,8 @@ coverage.xml
 .streamlit/secrets.toml
 
 # Rasa-related
+# rasa models and other new big files
+.rasa/
 models/
 results/
 *.db
