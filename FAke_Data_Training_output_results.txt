@@ -1,0 +1,8 @@
+Linear Regression Performance:
+RMSE: 379894.05090346746
+R²: 0.3708028689511431
+
+Random Forest Performance:
+RMSE: 372941.8885011251
+R²: 0.393621101439663
+ The models for the fake data training is not saved since it is not used for prediction "

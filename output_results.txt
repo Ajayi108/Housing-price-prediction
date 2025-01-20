@@ -1,0 +1,8 @@
+Linear Regression Performance:
+RMSE: 124939.37725296493
+R²: 0.7072869214253459
+
+Random Forest Performance:
+RMSE: 111728.32225347737
+R²: 0.7659169280736468
+Models saved as "linear_regression_model.pkl" and "random_forest_model.pkl"

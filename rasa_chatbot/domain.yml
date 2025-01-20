@@ -1,0 +1,82 @@
+version: "3.1"
+
+intents:
+  - greet
+  - ask_price
+  - provide_data
+  - skip
+  - goodbye
+
+entities:
+  - city
+  - beds
+  - baths
+  - living_space
+  - median_income
+
+slots:
+  city:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: city
+
+  beds:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: beds
+
+  baths:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: baths
+
+  living_space:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: living_space
+
+  median_income:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: median_income
+
+responses:
+  utter_greet:
+    - text: "Hello! I can help you predict house prices. Please provide the required data."
+
+  utter_ask_city:
+    - text: "Which city is the house located in?"
+
+  utter_ask_beds:
+    - text: "How many bedrooms does the house have?"
+
+  utter_ask_baths:
+    - text: "How many bathrooms does the house have?"
+
+  utter_ask_living_space:
+    - text: "What is the living space of the house (in sq ft)?"
+
+  utter_ask_median_income:
+    - text: "What is the median household income in the area (in dollars)?"
+
+  utter_skip:
+    - text: "Okay, skipping this question."
+
+  utter_final_prediction:
+    - text: "Thanks! Here's the predicted house price: ${price:,.2f}"
+
+  utter_goodbye:
+    - text: "Goodbye! Let me know if you need further assistance."
+
+actions:
+  - action_predict_price

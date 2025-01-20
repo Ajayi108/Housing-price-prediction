@@ -6,7 +6,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import root_mean_squared_error, r2_score
+from sklearn.metrics import mean_squared_error, r2_score  # Corrected import
 import joblib
 
 # Load the dataset (ensure CSV is in the same directory as this script)
@@ -60,19 +60,30 @@ lr_pipeline.fit(X_train, y_train)
 rf_pipeline.fit(X_train, y_train)
 
 # Evaluate Models
-lr_rmse = root_mean_squared_error(y_test, lr_pipeline.predict(X_test))
-rf_rmse = root_mean_squared_error(y_test, rf_pipeline.predict(X_test))
+lr_rmse = mean_squared_error(y_test, lr_pipeline.predict(X_test), squared=False)  # Corrected calculation
+rf_rmse = mean_squared_error(y_test, rf_pipeline.predict(X_test), squared=False)  # Corrected calculation
 
-print("Linear Regression Performance:")
-print(f"RMSE: {lr_rmse}")
-print(f"R²: {r2_score(y_test, lr_pipeline.predict(X_test))}")
+# Collect results in a string
+output = []
+output.append("Linear Regression Performance:")
+output.append(f"RMSE: {lr_rmse}")
+output.append(f"R²: {r2_score(y_test, lr_pipeline.predict(X_test))}")
 
-print("\nRandom Forest Performance:")
-print(f"RMSE: {rf_rmse}")
-print(f"R²: {r2_score(y_test, rf_pipeline.predict(X_test))}")
+output.append("\nRandom Forest Performance:")
+output.append(f"RMSE: {rf_rmse}")
+output.append(f"R²: {r2_score(y_test, rf_pipeline.predict(X_test))}")
+
+# Print results to console
+for line in output:
+    print(line)
 
 # Save the models
 joblib.dump(lr_pipeline, 'linear_regression_model.pkl')
 joblib.dump(rf_pipeline, 'random_forest_model.pkl')
 
 print("Models saved as 'linear_regression_model.pkl' and 'random_forest_model.pkl'")
+
+# Write the results to a file
+with open('output_results.txt', 'w') as f:
+    f.write('\n'.join(output))
+    f.write('\nModels saved as "linear_regression_model.pkl" and "random_forest_model.pkl"\n')
