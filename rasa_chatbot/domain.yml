@@ -1,10 +1,9 @@
 version: "3.1"
 
+
 intents:
+  - provide_info
   - greet
-  - ask_price
-  - provide_data
-  - skip
   - goodbye
 
 entities:
@@ -12,71 +11,68 @@ entities:
   - beds
   - baths
   - living_space
-  - median_income
+  - zip_code_density
+  - median_household_income
 
 slots:
   city:
     type: text
-    influence_conversation: false
     mappings:
       - type: from_entity
         entity: city
-
   beds:
     type: float
-    influence_conversation: false
     mappings:
       - type: from_entity
         entity: beds
-
   baths:
     type: float
-    influence_conversation: false
     mappings:
       - type: from_entity
         entity: baths
-
   living_space:
     type: float
-    influence_conversation: false
     mappings:
       - type: from_entity
         entity: living_space
-
-  median_income:
+  zip_code_density:
     type: float
-    influence_conversation: false
     mappings:
       - type: from_entity
-        entity: median_income
+        entity: zip_code_density
+  median_household_income:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: median_household_income
 
 responses:
   utter_greet:
-    - text: "Hello! I can help you predict house prices. Please provide the required data."
-
+    - text: "Hello! I'm here to help predict housing prices. Let's get started."
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
   utter_ask_city:
-    - text: "Which city is the house located in?"
-
+    - text: "In which city is the house located?"
   utter_ask_beds:
     - text: "How many bedrooms does the house have?"
-
   utter_ask_baths:
     - text: "How many bathrooms does the house have?"
-
   utter_ask_living_space:
-    - text: "What is the living space of the house (in sq ft)?"
+    - text: "What is the living space area in square feet?"
+  utter_ask_zip_code_density:
+    - text: "What is the population density of the zip code?"
+  utter_ask_median_household_income:
+    - text: "What is the median household income in that area?"
 
-  utter_ask_median_income:
-    - text: "What is the median household income in the area (in dollars)?"
-
-  utter_skip:
-    - text: "Okay, skipping this question."
-
-  utter_final_prediction:
-    - text: "Thanks! Here's the predicted house price: ${price:,.2f}"
-
-  utter_goodbye:
-    - text: "Goodbye! Let me know if you need further assistance."
+forms:
+  housing_form:
+    required_slots:
+      - city
+      - beds
+      - baths
+      - living_space
+      - zip_code_density
+      - median_household_income
 
 actions:
-  - action_predict_price
+  - action_predict

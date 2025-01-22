@@ -55,7 +55,6 @@ coverage.xml
 # Rasa-related
 # rasa models and other new big files
 .rasa/
-models/
 results/
 *.db
 events.log
@@ -69,4 +68,3 @@ Thumbs.db
 *.xlsx
 *.json
 *.parquet
-*.pickle

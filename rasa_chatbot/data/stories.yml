@@ -1,41 +1,12 @@
 version: "3.1"
 
 stories:
-  - story: predict_price_with_full_data
+  - story: Predict housing price
     steps:
-      - intent: ask_price
-      - action: utter_ask_city
-      - intent: provide_data
-        entities:
-          - city: "New York"
-      - action: utter_ask_beds
-      - intent: provide_data
-        entities:
-          - beds: "3"
-      - action: utter_ask_baths
-      - intent: provide_data
-        entities:
-          - baths: "2"
-      - action: utter_ask_living_space
-      - intent: provide_data
-        entities:
-          - living_space: "1500"
-      - action: utter_ask_median_income
-      - intent: provide_data
-        entities:
-          - median_income: "70000"
-      - action: action_predict_price
-
-  - story: skip_questions
-    steps:
-      - intent: ask_price
-      - action: utter_ask_city
-      - intent: skip
-      - action: utter_skip
-      - action: utter_ask_beds
-      - intent: skip
-      - action: utter_skip
-      - action: utter_ask_baths
-      - intent: skip
-      - action: utter_skip
-      - action: action_predict_price
+      - intent: greet
+      - action: utter_greet
+      - action: housing_form
+      - active_loop: housing_form
+      - action: action_predict
+      - intent: goodbye
+      - action: utter_goodbye
