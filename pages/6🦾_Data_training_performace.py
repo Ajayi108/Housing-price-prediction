@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-# Path to your text file
+# Path to the text file
 file_path = "output_results.txt"
 
 # Read the contents of the text file
@@ -14,9 +14,8 @@ except FileNotFoundError:
 st.title("Model Trainning performance")
 st.subheader("The followning models are use and these are their perfomance:")
 
-# You can use st.text or st.code based on preference
 st.text(content)  # Display as plain text
-# st.code(content, language="plaintext")  # Display with formatting
+# st.code(content, language="plaintext")  #to dispay it with format
 
 # Load data
 data = pd.read_csv('American_Housing_Data.csv')

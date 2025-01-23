@@ -6,18 +6,18 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error, r2_score  # Corrected import
+from sklearn.metrics import mean_squared_error, r2_score 
 import joblib
 
-# Load the dataset (ensure CSV is in the same directory as this script)
+# Load the dataset make sure that the CSV is in the same directory as this script)
 data = pd.read_csv('American_Housing_Data.csv')
 
-# Drop columns with low correlation
+# Drop the following columns with low correlation 
 columns_to_drop = ['Latitude', 'Longitude', 'Zip Code', 'Zip Code Population', 'Address', 'County', 'State']
 data = data.drop(columns=columns_to_drop, errors='ignore')
 
 # Data preprocessing
-data = data.dropna()  # Handle missing values (customize as needed)
+data = data.dropna()  # Handle missing values Not sure but drop anyway
 
 # Define features and target variable
 target = 'Price'  # Target column

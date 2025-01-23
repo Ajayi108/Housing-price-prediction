@@ -7,7 +7,7 @@ st.title("Distribution Plots")
 st.write("Select a column to visualize its distribution.")
 
 # Load data
-@st.cache
+@st.cache_data
 def load_data():
     data = pd.read_csv("American_Housing_Data.csv")
     return data

@@ -7,7 +7,7 @@ st.title("Feature Relationships")
 st.write("Explore relationships between two features.")
 
 # Load data
-@st.cache
+@st.cache_data
 def load_data():
     data = pd.read_csv("American_Housing_Data.csv")
     return data

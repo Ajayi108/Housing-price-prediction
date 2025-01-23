@@ -17,7 +17,7 @@ columns_to_drop = ['Latitude', 'Longitude', 'Zip Code', 'Zip Code Population', '
 data = data.drop(columns=columns_to_drop, errors='ignore')
 
 # Data preprocessing
-data = data.dropna()  # Handle missing values (customize as needed)
+data = data.dropna()  # Handle missing values
 
 # Define features and target variable
 target = 'Price'  # Target column
