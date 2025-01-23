@@ -2,7 +2,12 @@ version: "3.1"
 
 
 intents:
-  - provide_info
+  - provide_city
+  - provide_beds
+  - provide_baths
+  - provide_living_space
+  - provide_zip_code_density
+  - provide_median_household_income
   - greet
   - goodbye
 

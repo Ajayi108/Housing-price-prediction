@@ -1,12 +1,34 @@
 version: "3.1"
 
 stories:
-  - story: Predict housing price
+  - story: housing_form_story
     steps:
       - intent: greet
       - action: utter_greet
-      - action: housing_form
-      - active_loop: housing_form
+      - action: utter_ask_city
+      - intent: provide_city
+        entities:
+          - city: "San Francisco"
+      - action: utter_ask_beds
+      - intent: provide_beds
+        entities:
+          - beds: 3
+      - action: utter_ask_baths
+      - intent: provide_baths
+        entities:
+          - baths: 2
+      - action: utter_ask_living_space
+      - intent: provide_living_space
+        entities:
+          - living_space: 1500
+      - action: utter_ask_zip_code_density
+      - intent: provide_zip_code_density
+        entities:
+          - zip_code_density: 5000
+      - action: utter_ask_median_household_income
+      - intent: provide_median_household_income
+        entities:
+          - median_household_income: 100000
       - action: action_predict
       - intent: goodbye
       - action: utter_goodbye

@@ -1,27 +1,111 @@
-version: "3.1"
-
 nlu:
   - intent: greet
     examples: |
-      - hi
-      - hello
-      - hey there
-      - good morning
-      - good evening
+      - Hi
+      - Hello
+      - Hey
+      - Hi there
+      - Hello, how are you?
+      - Greetings
+      - Good morning
+      - Good evening
+      - Hey chatbot
+      - What's up
+      - Hello bot
+      - Hi assistant
+      - Hey there
+      - Good day
+      - Howdy
 
   - intent: goodbye
     examples: |
-      - bye
-      - goodbye
-      - see you
-      - talk to you later
-      - see ya
+      - Goodbye
+      - Bye
+      - See you later
+      - Talk to you soon
+      - Farewell
+      - Catch you later
+      - Have a good day
+      - I'm leaving now
+      - Bye for now
+      - See you
+      - Take care
+      - Adios
 
-  - intent: provide_info
+  - intent: provide_city
     examples: |
-      - The city is [San Francisco](city).
-      - There are [3](beds) bedrooms and [2](baths) bathrooms.
-      - The living space is [1500](living_space) square feet.
-      - The zip code density is [5000](zip_code_density).
-      - The median household income is [$75,000](median_household_income).
-      - [Los Angeles](city) with [4](beds) beds, [3](baths) baths, [2000](living_space) sqft, [3000](zip_code_density) density, and [$80,000](median_household_income) income.
+      - The city is [San Francisco](city)
+      - It's located in [Chicago](city)
+      - [Los Angeles](city)
+      - I live in [Houston](city)
+      - [New York City](city) is the location
+      - [Miami](city)
+      - The house is in [Austin](city)
+      - Property located in [Dallas](city)
+      - [Seattle](city) is where it is
+      - [Denver](city)
+
+  - intent: provide_beds
+    examples: |
+      - It has [3](beds) bedrooms
+      - There are [2](beds) bedrooms
+      - [4](beds) beds
+      - The house has [5](beds) bedrooms
+      - A total of [6](beds) beds
+      - Only [1](beds) bedroom
+      - The apartment has [2](beds)
+      - [3](beds) bed property
+      - The house includes [4](beds)
+      - With [5](beds) beds
+
+  - intent: provide_baths
+    examples: |
+      - There are [2](baths) bathrooms
+      - [1](baths) bathroom
+      - It has [3](baths) baths
+      - The house includes [2](baths) baths
+      - A total of [4](baths) bathrooms
+      - Only [1](baths) bath
+      - [3](baths) baths in the house
+      - The property has [2](baths)
+      - [4](baths) bathrooms
+      - Just [1](baths) bath
+
+  - intent: provide_living_space
+    examples: |
+      - The living space is [1500](living_space) square feet
+      - A living area of [2000](living_space) square feet
+      - It has [1200](living_space) square feet
+      - The house measures [1800](living_space) sq ft
+      - About [2200](living_space) square feet
+      - [1400](living_space) sq ft
+      - [1600](living_space) square feet
+      - [1000](living_space) sq ft
+      - Approximately [1900](living_space) square feet
+      - [2500](living_space) sq ft of space
+
+  - intent: provide_zip_code_density
+    examples: |
+      - The population density is [5000](zip_code_density)
+      - About [3000](zip_code_density) people per square mile
+      - Population density of [4000](zip_code_density)
+      - [3500](zip_code_density) people in the area
+      - Approximately [6000](zip_code_density) density
+      - [4500](zip_code_density) people per square mile
+      - The density is around [7000](zip_code_density)
+      - Close to [5500](zip_code_density) population density
+      - [2500](zip_code_density) is the density
+      - A density of [8000](zip_code_density)
+
+  - intent: provide_median_household_income
+    examples: |
+      - The median household income is [100000](median_household_income)
+      - The median income is around [95000](median_household_income)
+      - Income average is [80000](median_household_income)
+      - It is [85000](median_household_income)
+      - Median income of [90000](median_household_income)
+      - Approximately [75000](median_household_income)
+      - An income of [110000](median_household_income)
+      - Around [105000](median_household_income)
+      - The average income is [95000](median_household_income)
+      - A household income of [70000](median_household_income)

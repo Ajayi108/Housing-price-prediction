@@ -1,1 +1,51 @@
+version: "3.1"
 
+
+rules:
+  - rule: Greet and ask for city
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_ask_city
+
+  - rule: Handle city and ask for beds
+    steps:
+      - intent: provide_city
+        entities:
+          - city
+      - action: utter_ask_beds
+
+  - rule: Handle beds and ask for baths
+    steps:
+      - intent: provide_beds
+        entities:
+          - beds
+      - action: utter_ask_baths
+
+  - rule: Handle baths and ask for living space
+    steps:
+      - intent: provide_baths
+        entities:
+          - baths
+      - action: utter_ask_living_space
+
+  - rule: Handle living space and ask for zip code density
+    steps:
+      - intent: provide_living_space
+        entities:
+          - living_space
+      - action: utter_ask_zip_code_density
+
+  - rule: Handle zip code density and ask for median income
+    steps:
+      - intent: provide_zip_code_density
+        entities:
+          - zip_code_density
+      - action: utter_ask_median_household_income
+
+  - rule: Handle median income and predict
+    steps:
+      - intent: provide_median_household_income
+        entities:
+          - median_household_income
+      - action: action_predict
