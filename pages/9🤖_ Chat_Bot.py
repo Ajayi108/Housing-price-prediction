@@ -43,16 +43,3 @@ if input_text:
 # Display chat messages
 for idx, msg in enumerate(st.session_state["messages"]):
     message(msg["message"], is_user=msg["is_user"], key=f"message-{idx}")
-
-# Add space and ensure the input is always at the bottom
-st.markdown(
-    """
-    <style>
-    [data-testid="stVerticalBlock"] {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)

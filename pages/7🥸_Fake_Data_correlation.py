@@ -36,8 +36,8 @@ full_data = pd.concat([numerical_data, encoded_categorical], axis=1)
 correlation_matrix = full_data.corr()
 
 # Correlation heatmap
-st.title("Correlation Heatmap")
-st.write("Visualizing the correlations between features (including categorical variables).")
+st.title("Correlation Heatmap of fake data")
+st.write("Visualizing the correlations between features including categorical variables.")
 
 plt.figure(figsize=(12, 8))
 sns.heatmap(correlation_matrix, annot=True, fmt=".2f", cmap="coolwarm", cbar=True)
