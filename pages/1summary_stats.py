@@ -11,6 +11,14 @@ def load_data():
     return data
 
 data = load_data()
+st.write("Summary of real data")
 st.write(data.describe())
 
+@st.cache_data
+def load_fake_data():
+    fake_data = pd.read_csv("American_Housing_Data_Augmented.csv")
+    return fake_data
 
+fake_data = load_fake_data()
+st.write("Fake Data Summary Statistics:")
+st.write(fake_data.describe())

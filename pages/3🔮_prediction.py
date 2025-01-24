@@ -26,6 +26,7 @@ unique_cities = data['City'].unique()
 # Streamlit app
 st.title("Housing Price Prediction App")
 st.write("Predict housing prices using Linear Regression and Random Forest models.")
+st.write("Please enter values on the left side of the screen")
 
 # Show a preview of the dataset
 if st.checkbox("Show Dataset Preview"):
