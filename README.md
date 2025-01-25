@@ -1,8 +1,8 @@
-# Ajayi Ikponmwosa 22301241
+ Ajayi Ikponmwosa 22301241
 
-# House Price Prediction app and chatbot
+ House Price Prediction app and chatbot
 
-# my-first-project                      
+                      
 
 
 # Editing this README
