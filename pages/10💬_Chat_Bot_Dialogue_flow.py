@@ -60,3 +60,10 @@ dialogue_flow = create_dialogue_flow()
 
 # To Render the graph and display it in Streamlit
 st.graphviz_chart(dialogue_flow.source)
+
+
+# Save the graph as a high-resolution file (SVG)
+file_path = "dialogue_flow_high_res"
+dialogue_flow.render(file_path, format="svg", cleanup=True)
+
+print(f"The high-resolution dialogue flow has been saved as '{file_path}.svg'.")
