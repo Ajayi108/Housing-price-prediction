@@ -1,10 +1,31 @@
 import streamlit as st
 from streamlit_chat import message
 import requests
+import pandas as pd
+
+#======================================================================
+# Load the city list dynamically from the dataset
+@st.cache_data
+def load_cities():
+    # Path to the dataset
+    file_path = "American_Housing_Data.csv"
+    data = pd.read_csv(file_path)
+    cities = sorted(data['City'].dropna().unique())
+    return cities
+
+# Load cities into a variable
+available_cities = load_cities()
 
 # Streamlit app configuration
 st.title("Rasa Chatbot")
 st.write("Chat with the bot and get predictions.")
+st.write("I am a chatbot that can make predictions of housing prices for the following cities in the USA:")
+
+# Display the list of cities in a collapsible section
+with st.expander("View Available Cities"):
+    st.write(", ".join(available_cities))
+
+#=000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
 # Initialize session state for messages
 if "messages" not in st.session_state:
@@ -13,8 +34,10 @@ if "messages" not in st.session_state:
 # Rasa server endpoint
 rasa_endpoint = "http://localhost:5005/webhooks/rest/webhook"
 
+# Display chat messages
+
 # User input
-input_text = st.text_input("You:", key="input")
+input_text = st.chat_input("You:", key="input")
 
 if input_text:
     # Append user message to the session state
@@ -39,7 +62,7 @@ if input_text:
         st.session_state["messages"].append(
             {"message": f"Error: {str(e)}", "is_user": False}
         )
-
-# Display chat messages
 for idx, msg in enumerate(st.session_state["messages"]):
     message(msg["message"], is_user=msg["is_user"], key=f"message-{idx}")
+
+

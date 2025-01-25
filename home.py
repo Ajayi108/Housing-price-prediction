@@ -7,3 +7,4 @@ st.sidebar.success("Select a page above.")
 
 st.write("Welcome to the housing price prediction app!")
 st.write("Use the sidebar to navigate between pages.")
+st.write("I am a chatbot that can make predictions of housing price for 188 cities in the USA:")
