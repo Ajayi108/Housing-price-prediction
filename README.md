@@ -2,59 +2,72 @@
 
  House Price Prediction app and chatbot
 
+https://mygit.th-deg.de/ia28241/my-first-project
+
+https://mygit.th-deg.de/ia28241/my-first-project/-/wikis/home
                       
+# Project Description
+This project is an app and chatbot that helps its used to make prediction of the housing prices accross 188 cities in the US. 
+
+# Installation
+Python 3.10.4 version was used for this project.
 
 
-# Editing this README
+Use `pip install -r requirements.txt` in the terminal to install all dependensies in the reqirement.txt file needed to run this project.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Note, the following versions where used.
 
-## Suggestions for a good README
+- rasa==3.6.21
+- scikit-learn==1.1.3
+- streamlit==1.41.1
+- numpy==1.23.5
+- graphviz==0.20.3
+- matplotlib==3.5.3
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+# Data
 
-## Name
-Choose a self-explaining name for your project.
+The data set was gotten from kaggle. see link to data set below.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+[Link to download data set](https://www.kaggle.com/datasets/jeremylarcher/american-house-prices-and-demographics-of-top-cities)
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+For the approach of removing outliers see link to wiki page: 
+[Approach to remove Outliers](https://mygit.th-deg.de/ia28241/my-first-project/-/wikis/Outliers)
+
+For the approach for adding fake data, see link to wiki:
+[Fake data](https://mygit.th-deg.de/ia28241/my-first-project/-/wikis/Fake-data-)
+
+
+# Basic usage
+
+- First install all the the dependencies in the requirement.txt using `pip install -r requirements.txt`.
+
+- Run `train_models.py` To get the pkl file of the model used for predictions. ie (to get linear_regression_model.pkl and random_forest_model.pkl)
+
+- Run `AddFakeData.py` to add fake data to get the `American_Housing_Data_Augmented.csv` file.
+
+
+
+create three terminals, two for rasa and one for streamlit.
+- Navigate to the chatbot folder, ie. `cd .\rasa_chatbot\` on the two termnials for rasa.
+
+- Run the commands `rasa train` on the terminal if the rasa model is unavailable.
+
+- on one terminal while in chatbot directory run the command `rasa run actions ` .
+
+- On the other terminal while in the chatbot directory, run The command `rasa run --enable-api` . wait till the rasa server is up and running.
+
+- On the third terminal, while in the root directory, run the command `streamlit run home.py` to start streamlit page.
+
+
 
 ## Visuals
 Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
-## Installation
 
-install all the required modules in the requirement.txt file.
-
-pip install -r requirements.txt
-
-
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-
-To use the app open three different terminals. one for the streamlit app and the other two is for runing the rasa server.
-
-
-
-
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
 ## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+for support contact : ikponmwosa.ajayi@stud.th-deg.de
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
 
 ## Authors and acknowledgment
 Show your appreciation to those who have contributed to the project.
