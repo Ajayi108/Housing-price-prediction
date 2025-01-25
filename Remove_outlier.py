@@ -2,10 +2,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the dataset
-file_path = 'American_Housing_Data_20231209.csv'  # Update if the dataset is in a different location
+file_path = 'American_Housing_Data_20231209.csv' 
 data = pd.read_csv(file_path)
 
-# Function to remove outliers using IQR and visualize with box plot
+# Function to remove outliers using IQR and to visualize with box plot
 def remove_outliers_with_boxplot(df, column):
     # Create a box plot to visualize the column
     plt.figure(figsize=(8, 6))
@@ -31,14 +31,16 @@ def remove_outliers_with_boxplot(df, column):
 numeric_columns = ['Price', 'Beds', 'Baths', 'Living Space', 'Zip Code Population', 
                    'Zip Code Density', 'Median Household Income', 'Latitude', 'Longitude']
 
+#======================================================================================
 # Iteratively remove outliers and plot box plots
-data_no_outliers = data.copy()  # Create a copy of the data
+data_no_outliers = data.copy()  # for creating Create a copy of the data
 for column in numeric_columns:
     print(f"Processing column: {column}")
     data_no_outliers = remove_outliers_with_boxplot(data_no_outliers, column)
 
+#================================================================================================
 # Save the cleaned dataset
-cleaned_file_path = 'American_Housing_Data_No_Outliers_BoxPlot.csv'
+cleaned_file_path = 'American_Housing_Data.csv'
 data_no_outliers.to_csv(cleaned_file_path, index=False)
 
 print(f"Outliers removed using box plot method. Cleaned data saved to: {cleaned_file_path}")
