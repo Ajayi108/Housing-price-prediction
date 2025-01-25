@@ -14,7 +14,7 @@ def create_dialogue_flow():
     Dialogue_flow.node("start", "User: Hi (User Greets Bot (Intent: greet))" , **user_style )
     Dialogue_flow.node("utter_greet", "Bot: 'Hello! I'm here to help predict housing prices. Let's get started.'" , **bot_style)
     Dialogue_flow.node("ask_city", "Bot: 'In which city is the house located?'" , **bot_style)
-    Dialogue_flow.node("provide_city", "User: 'The city is San Francisco.'" , **user_style)
+    Dialogue_flow.node("provide_city", "User: 'The city is Miami.'" , **user_style)
     Dialogue_flow.node("ask_beds", "Bot: 'How many bedrooms does the house have?'", **bot_style)
     Dialogue_flow.node("provide_beds", "User: 'It has 3 bedrooms.'" , **user_style)
     Dialogue_flow.node("ask_baths", "Bot: 'How many bathrooms does the house have?'" , **bot_style)

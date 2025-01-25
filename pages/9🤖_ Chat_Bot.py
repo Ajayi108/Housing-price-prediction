@@ -18,7 +18,7 @@ available_cities = load_cities()
 
 # Streamlit app configuration
 st.title("Rasa Chatbot")
-st.write("Chat with the bot and get predictions.")
+st.write("please Check the Dialogue flow page and then Chat with the bot to get predictions.")
 st.write("I am a chatbot that can make predictions of housing prices for the following cities in the USA:")
 
 # Display the list of cities in a collapsible section
