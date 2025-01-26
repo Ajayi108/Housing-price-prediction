@@ -87,7 +87,7 @@ to see a video of the app check  the [Video on wiki](https://mygit.th-deg.de/ia2
 # Use cases
 
 - predicting House price base on the user input.
--  To check area specific data.
+- To check area specific data.
 - To explore the impact of different features on house prices
 - To see market changes in prices.
 - to quickly compare property prices.
