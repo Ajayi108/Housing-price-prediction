@@ -53,6 +53,9 @@ For the approach for adding fake data, see link to wiki:
 
 create three terminals, two for rasa and one for streamlit.
 - Navigate to the chatbot folder, ie. `cd .\rasa_chatbot\` on the two termnials for rasa.
+```
+cd .\rasa_chatbot\
+```
 
 - Run the commands `rasa train` on the terminal if the rasa model is unavailable.
 ```
