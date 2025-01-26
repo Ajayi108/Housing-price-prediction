@@ -15,6 +15,10 @@ Python 3.10.4 version was used for this project.
 
 Use `pip install -r requirements.txt` in the terminal to install all dependensies in the reqirement.txt file needed to run this project.
 
+```
+pip install -r requirements.txt
+```
+
 Note, the following versions where used.
 
 - rasa==3.6.21
@@ -51,12 +55,24 @@ create three terminals, two for rasa and one for streamlit.
 - Navigate to the chatbot folder, ie. `cd .\rasa_chatbot\` on the two termnials for rasa.
 
 - Run the commands `rasa train` on the terminal if the rasa model is unavailable.
+```
+rasa train
+```
 
 - on one terminal while in chatbot directory run the command `rasa run actions ` .
+```
+rasa run actions
+```
 
 - On the other terminal while in the chatbot directory, run The command `rasa run --enable-api` . wait till the rasa server is up and running.
+```
+rasa run --enable-api
+```
 
 - On the third terminal, while in the root directory, run the command `streamlit run home.py` to start streamlit page.
+```
+streamlit run home.py
+```
 
 
 
@@ -69,11 +85,3 @@ Depending on what you are making, it can be a good idea to include screenshots o
 for support contact : ikponmwosa.ajayi@stud.th-deg.de
 
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
