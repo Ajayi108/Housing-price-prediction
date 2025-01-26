@@ -80,7 +80,26 @@ streamlit run home.py
 
 
 ## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+
+to see a video of the app check  the [Video on wiki](https://mygit.th-deg.de/ia28241/my-first-project/-/wikis/home)
+
+
+## Use cases
+
+see the use cases on the wiki [Use cases](https://mygit.th-deg.de/ia28241/my-first-project/-/wikis/Use-cases-of-the-app)
+
+# Request 
+
+- The app is a multipage app implemented with streamlit.
+- The data set is downloaded from kaggle.
+- Two scikit learn models was used for training, Linear Reggression and random forest.
+- 50 percent fake data is added to the data.
+- Chat bot is implemented with rasa.
+- Three user personas are described in the wiki, and a system persona.
+- use cases are described in the wiki.
+- dialogue is created using graphviz.
+- All documentation and shown in the wiki. 
+
 
 
 
