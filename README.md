@@ -2,12 +2,12 @@
 
  House Price Prediction app and chatbot
 
-https://mygit.th-deg.de/ia28241/my-first-project
+ [Link to project](https://mygit.th-deg.de/ia28241/my-first-project)
 
-https://mygit.th-deg.de/ia28241/my-first-project/-/wikis/home
+ [Link to wiki](https://mygit.th-deg.de/ia28241/my-first-project/-/wikis/home)
                       
 # Project Description
-This project is an app and chatbot that helps its used to make prediction of the housing prices accross 188 cities in the US. 
+This project is an app and chatbot that helps its used to make visualize the data prediction of the housing prices accross 188 cities in the US. 
 
 # Installation
 Python 3.10.4 version was used for this project.
