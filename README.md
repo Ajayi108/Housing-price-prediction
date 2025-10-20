@@ -21,13 +21,6 @@ pip install -r requirements.txt
 
 Note, the following versions where used.
 
-- rasa==3.6.21
-- scikit-learn==1.1.3
-- streamlit==1.41.1
-- numpy==1.23.5
-- graphviz==0.20.3
-- matplotlib==3.5.3
-
 # Data
 
 The data set was gotten from kaggle. see link to data set below.
@@ -43,6 +36,12 @@ For the approach for adding fake data, see link to wiki:
 
 # Basic usage
 
+-Note Rasa is only compatible with Python 3.8–3.10.
+-Use.
+ `py -3.10 -m venv .venv`
+`.\.venv\Scripts\activate`
+`python -m pip install -U pip wheel setuptools`
+
 - First install all the the dependencies in the requirement.txt using `pip install -r requirements.txt`.
 
 - Run `train_models.py` To get the pkl file of the model used for predictions. ie (to get linear_regression_model.pkl and random_forest_model.pkl)
@@ -57,7 +56,7 @@ create three terminals, two for rasa and one for streamlit.
 cd .\rasa_chatbot\
 ```
 
-- Run the commands `rasa train` on the terminal if the rasa model is unavailable.
+- Run the commands `rasa train` on the terminal.
 ```
 rasa train
 ```
